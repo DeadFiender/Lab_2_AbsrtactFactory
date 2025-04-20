@@ -8,9 +8,15 @@ CONFIG += c++17 cmdline
 
 SOURCES += \
         classcpp.cpp \
+        classcsharp.cpp \
+        classjava.cpp \
         main.cpp \
         methodcpp.cpp \
-        printoperatorcpp.cpp
+        methodcsharp.cpp \
+        methodjava.cpp \
+        printoperatorcpp.cpp \
+        printoperatorcsharp.cpp \
+        printoperatorjava.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -18,9 +24,17 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
+    CodeFactoryCSharp.h \
     CodeFactoryCpp.h \
+    CodeFactoryJava.h \
     ICodefactory.h \
     Unit.h \
     classcpp.h \
+    classcsharp.h \
+    classjava.h \
     methodcpp.h \
-    printoperatorcpp.h
+    methodcsharp.h \
+    methodjava.h \
+    printoperatorcpp.h \
+    printoperatorcsharp.h \
+    printoperatorjava.h
