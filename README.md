@@ -20,20 +20,20 @@
 
 ### Структура
 1. Исходные файлы (.cpp)
-Cpp/ – реализация генерации кода для C++
-CSharp/ – реализация генерации кода для C#
-Java/ – реализация генерации кода для Java
+* Cpp/ – реализация генерации кода для C++
+* CSharp/ – реализация генерации кода для C#
+* Java/ – реализация генерации кода для Java
 
 2. Заголовочные файлы (.h)
 
-Cpp/ – объявления классов для генерации C++ кода (например, ClassCpp.h, MethodCpp.h, PrintOperatorCpp.h)
-CSharp/ – объявления классов для генерации C# кода (например, ClassCSharp.h, MethodCSharp.h, PrintOperatorCSharp.h)
-Java/ – объявления классов для генерации Java кода (например, ClassJava.h, MethodJava.h, PrintOperatorJava.h)
-ICodeFactory.h – общий интерфейс абстрактной фабрики для создания элементов кода
+* Cpp/ – объявления классов для генерации C++ кода (например, ClassCpp.h, MethodCpp.h, PrintOperatorCpp.h)
+* CSharp/ – объявления классов для генерации C# кода (например, ClassCSharp.h, MethodCSharp.h, PrintOperatorCSharp.h)
+* Java/ – объявления классов для генерации Java кода (например, ClassJava.h, MethodJava.h, PrintOperatorJava.h)
+* ICodeFactory.h – общий интерфейс абстрактной фабрики для создания элементов кода
 
-CodeFactoryCSharp.h, CodeFactoryCpp.h, CodeFactoryJava.h – конкретные реализации фабрики для каждого языка
+* CodeFactoryCSharp.h, CodeFactoryCpp.h, CodeFactoryJava.h – конкретные реализации фабрики для каждого языка
 
-Unit.h – базовый класс для всех элементов синтаксического дерева
+* Unit.h – базовый класс для всех элементов синтаксического дерева
 
 ##Возможности
 - Абстрактная фабрика (Abstract Factory) — порождающий шаблон проектирования, который предоставляет интерфейс для создания семейств взаимосвязанных или взаимозависимых объектов.
