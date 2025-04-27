@@ -4,19 +4,20 @@
 #include "CodeFactoryCpp.h"
 #include "CodeFactoryCSharp.h"
 #include "CodeFactoryJava.h"
+#include "Unit.h"
 
 std::string generateProgram(const ICodefactory& factory) {
     auto myClass = factory.createClass("MyClass", 0);
 
-    myClass->add(factory.createMethod("testFunc1", "void", 0), ClassCpp::PUBLIC);
+    myClass->add(factory.createMethod("testFunc1", "void", 0), Unit::PUBLIC);
 
-    myClass->add(factory.createMethod("testFunc2", "void", MethodCpp::STATIC), ClassCpp::PRIVATE);
+    myClass->add(factory.createMethod("testFunc2", "void", Unit::STATIC), Unit::PRIVATE);
 
-    myClass->add(factory.createMethod("testFunc3", "void", MethodCpp::VIRTUAL | MethodCpp::CONST), ClassCpp::PUBLIC);
+    myClass->add(factory.createMethod("testFunc3", "void", Unit::VIRTUAL | Unit::CONST), Unit::PUBLIC);
 
-    auto method = factory.createMethod("testFunc4", "void", MethodCpp::STATIC);
+    auto method = factory.createMethod("testFunc4", "void", Unit::STATIC);
     method->add(factory.createPrintOperator("Hello, world!"), 0);
-    myClass->add(method, ClassCpp::PROTECTED);
+    myClass->add(method, Unit::PROTECTED);
 
     return myClass->compile();
 }
@@ -25,8 +26,8 @@ std::string generateProgram(const ICodefactory& factory) {
 int main() {
     std::unique_ptr<ICodefactory> factory;
 
-    std::cout << "Choose language (1 - C++, 2 - C#, 3 - Java): ";
-    int choice=3;
+    std::cout << "Choose language (1 - C++, 2 - C#, 3 - Java): "<<std::endl;
+    int choice=2;
     std::cin >> choice;
 
     if (choice == 1) {

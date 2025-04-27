@@ -7,12 +7,13 @@
 class MethodCSharp : public Unit {
 public:
     enum Modifier {
-        STATIC   = 1,
-        ABSTRACT = 1 << 1,
-        VIRTUAL  = 1 << 2,
-        OVERRIDE = 1 << 3,
-        ASYNC    = 1 << 4
+        STATIC   = 1,      // static
+        ABSTRACT = 1 << 1, // abstract
+        VIRTUAL  = 1 << 2, // virtual
+        OVERRIDE = 1 << 3, // override
+        ASYNC    = 1 << 4  // async
     };
+
 
     MethodCSharp(const std::string& name, const std::string& returnType, Flags flags = 0);
     void add(const std::shared_ptr<Unit>& unit, Flags flags = 0) override;

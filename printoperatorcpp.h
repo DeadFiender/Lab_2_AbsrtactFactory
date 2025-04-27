@@ -3,13 +3,13 @@
 
 #include "Unit.h"
 
-class PrintOperatorCpp : public Unit
+class PrintOperatorCpp : public Unit// Класс, представляющий оператор печати в C++
 {
 public:
-    PrintOperatorCpp(const std::string &text);
-    std::string compile(unsigned int level = 0) const override;
+    PrintOperatorCpp(const std::string &text);// Конструктор принимает текст для печати
+    std::string compile(unsigned int level = 0) const override;// Метод компиляции оператора в текст
 private:
-    std::string m_text;
+    std::string m_text;// Текст, который нужно напечатать
 };
 
 #endif // PRINTOPERATORCPP_H

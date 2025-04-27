@@ -13,7 +13,7 @@ std::string MethodJava::compile(unsigned int level) const
 {
     std::string result = generateShift(level);
 
-    if (m_flags & OVERRIDE) result += "@Override\n" + generateShift(level);
+    if (m_flags & OVERRIDE) result += "@Override\n" + generateShift(level);// Спец.аннотация Java
     if (m_flags & STATIC)   result += "static ";
     if (m_flags & FINAL)    result += "final ";
     if (m_flags & ABSTRACT) result += "abstract ";
