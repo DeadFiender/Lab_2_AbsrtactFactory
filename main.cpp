@@ -27,7 +27,7 @@ int main() {
     std::unique_ptr<ICodefactory> factory;
 
     std::cout << "Choose language (1 - C++, 2 - C#, 3 - Java): "<<std::endl;
-    int choice=2;
+    int choice=1;
     std::cin >> choice;
 
     if (choice == 1) {

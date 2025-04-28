@@ -1,13 +1,13 @@
 #include "ClassCSharp.h"
 // Инициализация текстовых представлений модификаторов доступа
 const std::vector<std::string> ClassCSharp::ACCESS_MODIFIERS = {
-    "public", "protected", "private", "internal"
+    "public", "protected", "private", "internal", "file", "private protected", "protected internal"
 };
 
 ClassCSharp::ClassCSharp(const std::string& name, Flags)// Конструктор класса
     : m_name(name)
 {
-    m_fields.resize(ACCESS_MODIFIERS.size());// Резервируем место для 4 групп модификаторов
+    m_fields.resize(ACCESS_MODIFIERS.size());// Резервируем место для модификаторов
 }
 
 void ClassCSharp::add(const std::shared_ptr<Unit>& unit, Flags flags)

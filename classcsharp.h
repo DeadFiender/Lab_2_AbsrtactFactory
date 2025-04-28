@@ -6,7 +6,8 @@
 
 class ClassCSharp : public Unit {// Класс для генерации кода классов на языке C#
 public:
-    enum AccessModifier { PUBLIC, PROTECTED, PRIVATE, INTERNAL };// Дополнительный модификатор, характерный для C#
+    enum AccessModifier { PUBLIC, PROTECTED, PRIVATE, INTERNAL, FILE,
+                          PROTECTEDINTERNAL, PRIVATEPROTECTED };// Дополнительный модификатор, характерный для C#
     static const std::vector<std::string> ACCESS_MODIFIERS;// Статический вектор строк с текстовыми представлениями модификаторов
 
     ClassCSharp(const std::string& name, Flags flags = 0);// Конструктор принимает имя класса и флаги
